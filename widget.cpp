@@ -2,6 +2,7 @@
 #include "ui_widget.h"
 #include "tcp_thread.h"
 
+// : QWidget(parent)(继承)表示调用父类(Qwidget)中的构造函数(没有构造函数那就默认构造函数)
 Widget::Widget(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::Widget)
@@ -151,6 +152,20 @@ Widget::~Widget()
 // 获得本地IP
 QHostAddress Widget::get_local_host_ip()
 {
+    /*
+    获取主机名
+    QString localhostName=QHostInfo::localHostName();
+    */
+
+    /*
+    QHostInfo表示IP总信息的集合
+    QHostInfo hostinfo = QHostInfo::fromName(localhostName);
+    QList<QHostAddress> addrlist = hostinfo.addresses();
+    for(int i=0; i<addrlist.count(); i++)
+    {
+        QHostAddress host = addrlist.at(i);
+    }
+    */
     QList<QHostAddress> AddressList = QNetworkInterface::allAddresses();
     QHostAddress result;
     foreach(QHostAddress address, AddressList)

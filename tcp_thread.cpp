@@ -34,6 +34,9 @@ void tcp_thread::read_tcp()
 {
     QByteArray buffer;
     buffer = socket->readAll();
+    // 中文
+    // QString buf = QString::fromLocal8Bit(buffer.data());
+    // QByteArray dataGram = buf.toLocal8Bit();
     // 在点击"开始监听"之后recv_flag = True
     if(recv_flag)
     {

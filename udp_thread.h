@@ -19,6 +19,7 @@
 // OpenCV命名空间
 using namespace cv;
 
+
 class udp_thread : public QThread
 {
     Q_OBJECT

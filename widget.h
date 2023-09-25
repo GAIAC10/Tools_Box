@@ -29,6 +29,7 @@ class Widget : public QWidget
     Q_OBJECT
 
 public:
+    // QWidget *parent 新创建一个Widget并指定其父类, =0 表示是一个单独的Window
     explicit Widget(QWidget *parent = nullptr);
     ~Widget();
 
