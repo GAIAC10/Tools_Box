@@ -2,7 +2,16 @@ QT       += core gui
 QT       += network
 QT       += sql
 
+# 大于Qt4版本 才包含widget模块
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+
+# 应用程序名  生成的.exe程序名称
+TARGET = tools_box
+
+# 模板类型   应用程序模板
+# 模板变量告诉qmake为这个应用程序生成哪种makefile
+# 默认是app,但是也有其他的(lib/vcapp/vclib/...)
+TEMPLATE = app
 
 CONFIG += c++11
 

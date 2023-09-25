@@ -23,7 +23,7 @@
     </rect>
    </property>
    <property name="currentIndex">
-    <number>5</number>
+    <number>4</number>
    </property>
    <widget class="QWidget" name="win_select">
     <widget class="QGroupBox" name="groupbox_0">
@@ -637,23 +637,8 @@
      </widget>
     </widget>
    </widget>
-   <widget class="QWidget" name="image_trans">
-    <widget class="QGroupBox" name="groupBox_4">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>10</y>
-       <width>891</width>
-       <height>651</height>
-      </rect>
-     </property>
-     <property name="title">
-      <string>图片传输</string>
-     </property>
-    </widget>
-   </widget>
    <widget class="QWidget" name="database_opr">
-    <widget class="QGroupBox" name="groupBox_5">
+    <widget class="QGroupBox" name="groupBox_4">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -843,19 +828,6 @@
      </property>
     </item>
    </widget>
-   <widget class="QPushButton" name="push_image">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>270</y>
-      <width>141</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>图片传输</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="push_dataget">
     <property name="geometry">
      <rect>
@@ -886,7 +858,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>330</y>
+      <y>270</y>
       <width>141</width>
       <height>41</height>
      </rect>

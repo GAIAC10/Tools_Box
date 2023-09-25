@@ -1,5 +1,6 @@
 #include "my_mysql.h"
 
+// 连接数据库
 bool my_mysql(QSqlDatabase db)
 {
     db = QSqlDatabase::addDatabase("QMYSQL");

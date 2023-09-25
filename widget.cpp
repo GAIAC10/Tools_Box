@@ -49,8 +49,6 @@ Widget::Widget(QWidget *parent)
     connect(ui->push_history, &QPushButton::clicked, [this]()->void{ui->combobox_main->setCurrentIndex(0);ui->stackedwidget_main->setCurrentIndex(2);});
     // 视频传输
     connect(ui->push_video, &QPushButton::clicked, [this]()->void{ui->combobox_main->setCurrentIndex(0);ui->stackedwidget_main->setCurrentIndex(3);});
-    // 图片传输
-    connect(ui->push_image, &QPushButton::clicked, [this]()->void{ui->combobox_main->setCurrentIndex(0);ui->stackedwidget_main->setCurrentIndex(4);});
     // 获取数据
 //    connect(ui->push_dataget, &QPushButton::clicked, this, []()
 //    {
@@ -59,7 +57,7 @@ Widget::Widget(QWidget *parent)
     // 数据库
     connect(ui->push_database, &QPushButton::clicked, [this]()
     {
-        ui->stackedwidget_main->setCurrentIndex(5);
+        ui->stackedwidget_main->setCurrentIndex(4);
     }
     );
 

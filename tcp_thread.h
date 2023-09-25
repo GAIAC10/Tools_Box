@@ -1,6 +1,11 @@
 #ifndef TCP_THREAD_H
 #define TCP_THREAD_H
 
+/*
+TCP传输图片
+https://blog.51cto.com/u_10941874/5333718
+*/
+
 #include <QThread>
 #include <QHostAddress>
 #include <QQueue>

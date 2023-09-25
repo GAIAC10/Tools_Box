@@ -30,6 +30,7 @@ class Widget : public QWidget
 
 public:
     // QWidget *parent 新创建一个Widget并指定其父类, =0 表示是一个单独的Window
+    // 有explicit时就必须要通过 对象后面加上括号 来调用有参构造
     explicit Widget(QWidget *parent = nullptr);
     ~Widget();
 

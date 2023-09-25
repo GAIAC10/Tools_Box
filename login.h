@@ -9,6 +9,9 @@
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QMouseEvent>
+#include <QSqlQuery>
+#include <QMessageBox>
+#include <QSqlError>
 
 namespace Ui {class login;}
 
@@ -32,12 +35,14 @@ private:
     QFile css_file;
     bool mouse_press;
     QPoint begin_point;
+    int key = 66;
 
 signals:
     void send_login_success();
 
 private slots:
     void on_pushButton_login_clicked();
+    void on_pushButton_register_clicked();
 };
 
 #endif // LOGIN_H

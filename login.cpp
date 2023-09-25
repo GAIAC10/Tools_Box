@@ -107,11 +107,80 @@ bool login::eventFilter(QObject *watcher, QEvent *e)
     return QWidget::eventFilter(watcher,e);
 }
 
+// 用户登录,向数据库中查询数据并判断
 void login::on_pushButton_login_clicked()
 {
-    QString Get_name = ui->lineEdit_username->text();
-    QString Get_passwd = ui->lineEdit_passwd->text();
-    // 具体步骤
+    /*
+    // 获取用户名
+    QString username = ui->lineEdit_username->text();
+    // 获取密码
+    QString password = ui->lineEdit_passwd->text();
+    // 加密
+    QByteArray mm_utf8 = password.toUtf8();
+    for(int i = 0; i < mm_utf8.size(); i++)
+    {
+        mm_utf8[i] = mm_utf8[i] + key;
+    }
+    QString password_md = QString(mm_utf8);
+    // 查询语句
+    QString sql = QString("select * from student where username = '%1' and password = '%2';").arg(username).arg(password_md);
+    // 执行查询
+    QSqlQuery query(db);
+    // 没有查询到数据
+    if(!query.exec(sql))
+    {
+        qDebug() << db.lastError().text();
+    }
+    // 查询到数据
+    if(query.next())
+    {
+        QMessageBox::information(this,"登录提示","登录成功");
+        qDebug() << "登录成功";
+    // 记住密码 勾选框选中
+    // if(ui->checkBox->isChecked())
+    // {
+    // }
+    }
+    else
+    {
+        QMessageBox::information(this,"登录提示","登录失败");
+        qDebug() << "登录失败";
+    }
+    */
     emit send_login_success();
     this->hide();
+}
+
+// 用户注册,向数据库中插入数据
+void login::on_pushButton_register_clicked()
+{
+    /*
+    // 获取用户名
+    QString username = ui->lineEdit_username->text();
+    // 获取密码
+    QString password = ui->lineEdit_passwd->text();
+    // 加密
+    QByteArray mm_utf8 = password.toUtf8();
+    for(int i = 0; i < mm_utf8.size(); i++)
+    {
+        // 密钥
+        mm_utf8[i] = mm_utf8[i] + key;
+    }
+    QString password_md = QString(mm_utf8);
+    // 插入语句
+    QString sql = QString("insert into student(username,password) value('%1','%2');").arg(username).arg(password_md);
+    // 执行插入
+    QSqlQuery query(db);
+    if(query.exec(sql))
+    {
+        QMessageBox::information(this,"注册提示","注册成功");
+        qDebug() << "注册成功";
+    }
+    else
+    {
+        QMessageBox::information(this,"注册提示","注册失败");
+        qDebug() << "注册失败";
+        qDebug() << db.lastError().text();
+    }
+    */
 }
